@@ -1,0 +1,13 @@
+.display{
+    width: 80%;
+    height: 20%;
+    margin: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: rgb(39, 200, 200);
+    border-radius: 5px;
+    overflow-x: auto;
+    overflow-y: hidden;
+
+}

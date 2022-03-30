@@ -1,0 +1,24 @@
+.button {
+    height: 2.5rem;
+    width: 4.5rem;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-size: large;
+    padding:0.3em 1.2em;
+    margin:0 0.1em 0.1em 0;
+    border:0.16em solid rgba(255,255,255,0);
+    border-radius:2em;
+}
+
+.button:hover{
+        border-color: rgba(255,255,255,1);
+        background-color: gold;
+        cursor: pointer;
+    }
+    @media all and (max-width:30em){
+        .button{
+        display:block;
+        margin:0.2em auto;
+        }
+    }
