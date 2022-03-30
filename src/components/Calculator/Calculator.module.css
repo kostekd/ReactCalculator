@@ -7,4 +7,16 @@
     flex-direction: row;
     background-color: gray;
     border-radius: 5px;
+    animation: slide-up 300ms ease-out forwards;
 }
+
+@keyframes slide-up {
+    from {
+      opacity: 0;
+      transform: translateY(20rem);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
