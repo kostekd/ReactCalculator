@@ -3,8 +3,17 @@ import classes from "./Calculator.module.css";
 import CalculatorButtons from "./CalculatorButtons";
 import Display from "./Display";
 
-const Calculator = () => {
-    const initialDisplayValue = localStorage.getItem('currentExpression') || '';
+
+interface CalculatorProps{
+  onAddHandler: Function
+}
+const Calculator = (props : CalculatorProps) => {
+    let initialDisplayValue = localStorage.getItem('currentExpression') || '';
+
+    if(localStorage.getItem('currentExpression')==="Error!"){
+      initialDisplayValue="";
+    }
+
     const [displayContent, setDisplayContent] = useState(initialDisplayValue);
 
     const calculateExpression = () => {
@@ -23,6 +32,8 @@ const Calculator = () => {
     const onClickButton = (value : String) => {
       if(value === '='){
         const displayedValue = calculateExpression().toString();
+        const displayHistory = displayContent + value + displayedValue;
+        props.onAddHandler(displayHistory);
         setDisplayContent(displayedValue);
       }else{
         setDisplayContent(displayContent + value);

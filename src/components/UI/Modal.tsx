@@ -1,9 +1,22 @@
-import React from "react";
+import React, { Fragment } from "react";
+import ReactDOM from "react-dom";
+import Backdrop from "./Backdrop";
+import ModalOverlay from "./ModalOverlay";
 
-const Modal = () => {
+interface ModalProps{
+    onCloseHandler: Function;
+    elementsToRender: JSX.Element[];
+}
+
+const Modal = (props : ModalProps) => {
+    const portalDestination : HTMLElement = document.getElementById('overlay') as HTMLElement;
+
     return(
-        <div>
-            <h1>Hello</h1>
-        </div>
+        <Fragment>
+            {ReactDOM.createPortal(<Backdrop/>, portalDestination)}
+            {ReactDOM.createPortal(<ModalOverlay elementsToRender={props.elementsToRender} onButtonClick={props.onCloseHandler}/>, portalDestination)}
+        </Fragment>
     );
 }
+
+export default Modal;

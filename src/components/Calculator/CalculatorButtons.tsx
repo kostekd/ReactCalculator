@@ -10,7 +10,7 @@ const MOCK_BUTTONS_CONTENT = [
   "4",
   "5",
   "6",
-  "x",
+  "*",
   "1",
   "2",
   "3",
