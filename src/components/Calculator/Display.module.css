@@ -3,6 +3,7 @@
     height: 20%;
     margin: 2rem;
     display: flex;
+    flex-wrap: nowrap;
     justify-content: center;
     align-items: flex-start;
     background-color: rgb(39, 200, 200);

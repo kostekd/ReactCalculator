@@ -15,9 +15,16 @@ function App() {
     }
   }
 
+  const deleteElementHandler = (exp: String) => {
+    const response = mathExpressions.filter((expression : String) => expression !== exp);
+
+    setMathExpressions(response);
+  };
+
   const historyContext = {
     items: mathExpressions,
-    addItem: addElementHandler
+    addItem: addElementHandler,
+    deleteItem: deleteElementHandler
   }
 
   useEffect(() => {

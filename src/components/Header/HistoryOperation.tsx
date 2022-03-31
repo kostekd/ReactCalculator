@@ -11,7 +11,7 @@ const HistoryOperation = () => {
   const listOfOperations = ctx.items.map((operation) => (
     <li className={classes["list-element"]}>
       <h2>{operation}</h2>
-      <Button label="Delete" onButtonClick={()=> {console.log("Mocked function")}}></Button>
+      <Button label="Delete" onButtonClick={()=> {ctx.deleteItem(operation)}}></Button>
     </li>
 
   ));

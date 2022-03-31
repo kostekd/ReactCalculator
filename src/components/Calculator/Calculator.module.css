@@ -5,9 +5,10 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    background-color: gray;
+    background-color: rgb(156, 148, 148);
     border-radius: 5px;
     animation: slide-up 300ms ease-out forwards;
+    box-shadow: 10px 5px 5px rgb(158, 157, 157);
 }
 
 @keyframes slide-up {
