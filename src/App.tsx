@@ -1,8 +1,7 @@
-import React, { Fragment, useEffect, useState } from 'react';
+import React, {useEffect, useState } from 'react';
 import './App.css';
 import Header from './components/Header/Header';
 import Calculator from './components/Calculator/Calculator';
-import Modal from './components/UI/Modal';
 import HistoryContext from './store/history-context';
 
 function App() {
